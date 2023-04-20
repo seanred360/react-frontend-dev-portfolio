@@ -41,12 +41,12 @@ const Home = ({ theme, onToggleTheme }) => {
         secondaryLang={secondaryLang}
         setLang={setLang}
       />
-      <Script
+      <script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=G-Y9NQ5XB2T7`}
         strategy="afterInteractive"
       />
-      <Script
+      <script
         id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
