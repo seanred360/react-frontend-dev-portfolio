@@ -3,6 +3,7 @@ import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 import { Icon } from "@iconify/react";
+import * as googleAnalytics from "../lib/GoogleAnalytics";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -70,6 +71,9 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="github-link"
+                    onClick={googleAnalytics.event({
+                      action: `click_github_${data.title}`,
+                    })}
                   >
                     GitHub <Icon icon="akar-icons:github-fill" />
                   </a>
@@ -78,6 +82,9 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="site-link"
+                    onClick={googleAnalytics.event({
+                      action: `click_live_${data.title}`,
+                    })}
                   >
                     Live site <Icon icon="bx:link-external" />
                   </a>

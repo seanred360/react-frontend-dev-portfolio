@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import ContactButton from "./common/ContactButton";
 import ContactModal from "./common/ContactModal";
+import * as googleAnalytics from "../lib/GoogleAnalytics";
 
 const Header = ({
   theme,
@@ -36,13 +37,10 @@ const Header = ({
       e.preventDefault;
       e.stopPropagation();
     }
-
-    // if (show) {
-    //   document.body.classList.add("no-scroll");
-    // } else {
-    //   document.body.classList.remove("no-scroll");
-    // }
     setShowModal(show);
+    googleAnalytics.event({
+      action: "click_contact_button",
+    });
   };
 
   return (

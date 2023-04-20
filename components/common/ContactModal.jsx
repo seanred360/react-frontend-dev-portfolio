@@ -6,6 +6,7 @@ import axios from "axios";
 import PageSpinner from "./PageSpinner";
 import SuccessFailModal from "./SucessFailModal";
 import { Modal } from "react-bootstrap";
+import * as googleAnalytics from "../../lib/GoogleAnalytics";
 
 const ContactModal = ({ onToggleModal, show }) => {
   const [formData, setFormData] = useState({
@@ -69,7 +70,7 @@ const ContactModal = ({ onToggleModal, show }) => {
     }
     axios({
       method: "POST",
-      url: 'api/contact',
+      url: "api/contact",
       data: formData,
     }).then((response) => {
       if (response.data.status === "success") {
@@ -84,6 +85,10 @@ const ContactModal = ({ onToggleModal, show }) => {
         setError("failed");
         setLoading(false);
       }
+    });
+
+    googleAnalytics.event({
+      action: "submit_contact_form",
     });
   };
 

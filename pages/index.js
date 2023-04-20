@@ -7,6 +7,7 @@ import { useData } from "../components/DataContext";
 import Spinner from "../components/common/Spinner";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
+import Script from "next/script";
 
 const Projects = dynamic(() => import("../components/Projects"), {
   loading: () => (
@@ -40,6 +41,25 @@ const Home = ({ theme, onToggleTheme }) => {
         primaryLang={primaryLang}
         secondaryLang={secondaryLang}
         setLang={setLang}
+      />
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=G-Y9NQ5XB2T7`}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Y9NQ5XB2T7', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
       />
       <Suspense
         fallback={

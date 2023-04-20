@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import * as googleAnalytics from "../../lib/GoogleAnalytics";
 
 export const useDarkMode = () => {
   const [theme, setTheme] = useState("light");
@@ -10,6 +11,9 @@ export const useDarkMode = () => {
 
   const handleToggleTheme = () => {
     theme === "light" ? setMode("dark") : setMode("light");
+    googleAnalytics.event({
+      action: `toggle_theme_${theme}`,
+    });
   };
 
   useEffect(() => {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ProjectDetailsModal from "./ProjectDetailsModal";
+import * as googleAnalytics from "../lib/GoogleAnalytics";
 
 const Projects = ({ sectionName, projects, pageInfo }) => {
   const [modalData, setModalData] = useState();
@@ -8,6 +9,9 @@ const Projects = ({ sectionName, projects, pageInfo }) => {
   const handleShowModal = (data) => {
     setShowModal(true);
     setModalData(data);
+    googleAnalytics.event({
+      action: `click_project_${data.title}`,
+    });
   };
 
   const projectsMap = projects.map((project) => {

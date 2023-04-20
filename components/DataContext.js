@@ -2,6 +2,7 @@ import { useContext, useEffect, useState, createContext } from "react";
 import primaryLangData from "../pages/api/res_primaryLanguage";
 import secondaryLangData from "../pages/api/res_secondaryLanguage";
 import portfolioSharedData from "../pages/api/portfolio_shared_data";
+import * as googleAnalytics from "../lib/GoogleAnalytics";
 
 const DataContext = createContext({});
 
@@ -20,6 +21,9 @@ const DataProvider = ({ children }) => {
     window.localStorage.setItem("lang", lang);
     lang == "primary" && setCurrentLang(primaryLang);
     lang == "secondary" && setCurrentLang(secondaryLang);
+    googleAnalytics.event({
+      action: `change_language_${lang}`,
+    });
   };
 
   useEffect(() => {

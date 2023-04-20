@@ -1,4 +1,5 @@
 import styles from "../../styles/GitHubCornerButton.module.scss";
+import * as googleAnalytics from "../../lib/GoogleAnalytics";
 
 const GitHubCornerButton = () => {
   return (
@@ -8,6 +9,9 @@ const GitHubCornerButton = () => {
       rel="noreferrer"
       className={styles["github-corner"]}
       aria-label="View source on GitHub"
+      onClick={googleAnalytics.event({
+        action: "click_github_portfolio",
+      })}
     >
       <svg width="90" height="90" viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>

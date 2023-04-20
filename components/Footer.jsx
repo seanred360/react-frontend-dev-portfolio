@@ -1,10 +1,18 @@
 import styles from "../styles/Footer.module.scss";
 import { Icon } from "@iconify/react";
+import * as googleAnalytics from "../lib/GoogleAnalytics";
 
 const Footer = ({ socialMedia, personalInfo }) => {
   const socialMediaMap = socialMedia.map((link) => (
     <span key={link.name}>
-      <a href={link.url} target="_blank" rel="noopener noreferrer">
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={googleAnalytics.event({
+          action: `click_${link.name}_footer`,
+        })}
+      >
         <Icon icon={link.class} />
       </a>
     </span>
@@ -28,6 +36,9 @@ const Footer = ({ socialMedia, personalInfo }) => {
           href="https://seanred-v-1-1-3-reactversion.netlify.app/"
           target="_blank"
           rel="noreferrer"
+          onClick={googleAnalytics.event({
+            action: `click_reactversion_footer`,
+          })}
         >
           V1.1.3 seanred.io React version
         </a>
