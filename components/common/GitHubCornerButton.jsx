@@ -9,7 +9,7 @@ const GitHubCornerButton = () => {
       rel="noreferrer"
       className={styles["github-corner"]}
       aria-label="View source on GitHub"
-      onClick={googleAnalytics.event({
+      onClick={() => googleAnalytics.event({
         action: "click_github_portfolio",
       })}
     >

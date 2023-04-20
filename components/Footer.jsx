@@ -9,7 +9,7 @@ const Footer = ({ socialMedia, personalInfo }) => {
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={googleAnalytics.event({
+        onClick={() => googleAnalytics.event({
           action: `click_${link.name}_footer`,
         })}
       >
@@ -36,7 +36,7 @@ const Footer = ({ socialMedia, personalInfo }) => {
           href="https://seanred-v-1-1-3-reactversion.netlify.app/"
           target="_blank"
           rel="noreferrer"
-          onClick={googleAnalytics.event({
+          onClick={() => googleAnalytics.event({
             action: `click_reactversion_footer`,
           })}
         >

@@ -71,9 +71,11 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="github-link"
-                    onClick={googleAnalytics.event({
-                      action: `click_github_${data.title}`,
-                    })}
+                    onClick={() =>
+                      googleAnalytics.event({
+                        action: `click_github_${data.title}`,
+                      })
+                    }
                   >
                     GitHub <Icon icon="akar-icons:github-fill" />
                   </a>
@@ -82,7 +84,7 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="site-link"
-                    onClick={googleAnalytics.event({
+                    onClick={() => googleAnalytics.event({
                       action: `click_live_${data.title}`,
                     })}
                   >
