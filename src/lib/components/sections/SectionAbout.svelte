@@ -41,10 +41,6 @@
           {bioText}
         </p>
       </Typewriter>
-
-      <!-- <p class="px-[16px] py-[32px]" use:concurrent={{ interval: 15 }}>
-        {bioText}
-      </p> -->
     </div>
   </div>
 </section>

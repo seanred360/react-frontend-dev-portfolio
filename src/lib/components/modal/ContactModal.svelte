@@ -31,7 +31,7 @@
 </script>
 
 <div
-  class="fixed z-[999] w-[100svw] h-[100svh] flex flex-col justify-center items-center bg-black/75"
+  class="fixed z-[999] svw svh flex flex-col justify-center items-center bg-black/75"
   on:click|self={scrollLock.toggle}
   on:keypress={null}
   transition:blur={{ duration: 500 }}
