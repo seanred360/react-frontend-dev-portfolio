@@ -44,7 +44,7 @@ const Home = ({ theme, onToggleTheme }) => {
       />
       <Script
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=G-Y9NQ5XB2T7`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
       <Script
@@ -55,7 +55,7 @@ const Home = ({ theme, onToggleTheme }) => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-Y9NQ5XB2T7', {
+            gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}', {
               page_path: window.location.pathname,
             });
           `,
