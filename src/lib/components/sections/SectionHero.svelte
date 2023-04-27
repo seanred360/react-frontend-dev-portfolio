@@ -7,7 +7,7 @@
 </script>
 
 <div
-  class="relative w-full h-[100svh] flex flex-col justify-center items-center gap-[16px] bg-transparent overflow-hidden"
+  class="relative w-full svh flex flex-col justify-center items-center gap-[16px] bg-transparent overflow-hidden"
 >
   <AnimatedBlob />
   <div>
