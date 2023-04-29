@@ -28,12 +28,10 @@
     <h2>Projects</h2>
     <ul class="flex flex-wrap justify-center items-center gap-[32px]">
       {#each projects as project}
-        <li
-          class="rounded-xl border-black dark:border-smoke border-2 hover:scale-[1.05] transition-all hover:rotate-[-15deg] origin-bottom-left cursor-pointer"
-        >
+        <li class="rounded-xl border-black dark:border-smoke border-2 group">
           <button
             data-umami-event={`click_project_${project.title["en"]}`}
-            class="p-[12px] bg-white dark:bg-darkSmoke"
+            class="p-[12px] bg-white dark:bg-darkSmoke transition-all group-hover:rotate-[-15deg] origin-bottom-left cursor-pointer"
             on:click={() => handleClickProject(project)}
           >
             <video class="w-[320px]" src={project.preview} autoplay muted loop>
