@@ -41,6 +41,8 @@
         <ul class="flex gap-[16px] mb-[24px] text-[14px]">
           <li>
             <a
+              target="_blank"
+              rel="noreferrer"
               data-umami-event={`open_${$modalProps.title["en"]}_github`}
               href={$modalProps.githubURL}
               class="flex justify-center items-center px-[12px] py-[6px] bg-purple-600 rounded-full text-white font-bold hover:shadow-glowOuter dark:hover:shadow-glowWhite transition-shadow"
@@ -53,6 +55,8 @@
           </li>
           <li>
             <a
+              target="_blank"
+              rel="noreferrer"
               data-umami-event={`open_${$modalProps.title["en"]}_livesite`}
               href={$modalProps.liveSiteURL}
               class="flex justify-center items-center px-[12px] py-[6px] bg-black dark:bg-white rounded-full text-white dark:text-black font-bold hover:shadow-glowOuter dark:hover:shadow-glowWhite transition-shadow"
