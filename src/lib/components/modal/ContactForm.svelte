@@ -14,6 +14,7 @@
         name="name"
         type="text"
         required
+        data-umami-event="click_contact_form_name"
       />
     </label>
     <label>
@@ -23,6 +24,7 @@
         name="email"
         type="email"
         required
+        data-umami-event="click_contact_form_email"
       />
     </label>
     <label>
@@ -32,6 +34,7 @@
         name="message"
         type="text"
         required
+        data-umami-event="click_contact_form_message"
       />
     </label>
     {#if loading}
@@ -42,6 +45,7 @@
       </div>
     {:else}
       <button
+        data-umami-event="click_contact_form_submit"
         type="submit"
         disabled={loading}
         class="w-[250px] flex justify-center mx-auto py-[15px] mt-[24px] px-[20px] rounded-full border-2 border-electroBlue dark:border-white text-electroBlue dark:text-white text-[24px] hover:shadow-glow dark:hover:shadow-glowWhite transition-all disabled:shadow-none"

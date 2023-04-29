@@ -11,7 +11,11 @@
 </script>
 
 <div
+<<<<<<< HEAD
   class="fixed z-[999] svw svh flex flex-col justify-center items-center bg-black/75"
+=======
+  class="fixed z-[999] w-[100svw] h-[100svh] flex flex-col justify-center items-center bg-black/75"
+>>>>>>> 69572d3 (feat: add umami analytics)
   on:click|self={scrollLock.toggle}
   on:keypress={null}
   transition:blur={{ duration: 500 }}
@@ -41,6 +45,10 @@
         <ul class="flex gap-[16px] mb-[24px] text-[14px]">
           <li>
             <a
+<<<<<<< HEAD
+=======
+              data-umami-event={`open_${$modalProps.title["en"]}_github`}
+>>>>>>> 69572d3 (feat: add umami analytics)
               href={$modalProps.githubURL}
               class="flex justify-center items-center px-[12px] py-[6px] bg-purple-600 rounded-full text-white font-bold hover:shadow-glowOuter dark:hover:shadow-glowWhite transition-shadow"
               >Github<Icon
@@ -52,6 +60,10 @@
           </li>
           <li>
             <a
+<<<<<<< HEAD
+=======
+              data-umami-event={`open_${$modalProps.title["en"]}_livesite`}
+>>>>>>> 69572d3 (feat: add umami analytics)
               href={$modalProps.liveSiteURL}
               class="flex justify-center items-center px-[12px] py-[6px] bg-black dark:bg-white rounded-full text-white dark:text-black font-bold hover:shadow-glowOuter dark:hover:shadow-glowWhite transition-shadow"
               >Live Site<Icon

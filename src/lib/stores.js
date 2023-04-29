@@ -1,18 +1,31 @@
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
 
 function createScrollLock(initState) {
-	const { subscribe, set, update } = writable(initState);
+  const { subscribe, update } = writable(initState);
 
-	return {
-		subscribe,
-		toggle: () => {
-			update((state) => !state);
-			document.body.classList.toggle('scroll-lock');
-		}
-	};
+  return {
+    subscribe,
+    toggle: () => {
+      update((state) => !state);
+      document.body.classList.toggle("scroll-lock");
+      umami.track("toggle_scrollLock");
+    },
+  };
 }
 
-export const currentLanguage = writable('en');
+function createLanguage(initState) {
+  const { subscribe, set } = writable(initState);
+
+  return {
+    subscribe,
+    set: (newValue) => {
+      set(newValue);
+      umami.track(`change_language_${newValue}`);
+    },
+  };
+}
+
+export const currentLanguage = createLanguage("en");
 export const scrollLock = createScrollLock(false);
 export const modalProps = writable(null);
 export const modalType = writable(null);

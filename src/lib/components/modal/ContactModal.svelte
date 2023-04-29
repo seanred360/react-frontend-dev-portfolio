@@ -7,6 +7,7 @@
   import ContactForm from "./ContactForm.svelte";
 
   let loading = false;
+  let status;
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -24,8 +25,10 @@
     loading = false;
     if (response.ok) {
       status = "success";
+      umami.track("contact_form_submit_success");
     } else {
       status = "error";
+      umami.track("contact_form_submit_failure");
     }
   }
 </script>
