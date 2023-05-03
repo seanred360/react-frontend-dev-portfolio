@@ -6,7 +6,7 @@ This is a portfolio website for Sean Redmon, the Software developer.
 <img src="https://img.shields.io/badge/-multilingual-blue" alt="multilingual"/> &nbsp; <img src="https://img.shields.io/badge/-mobile friendly-blue" alt="mobile friendly"/> &nbsp; <img src="https://img.shields.io/badge/-light/dark mode-blue" alt="light/dark mode"/> &nbsp; <img src="https://img.shields.io/badge/-json fetched data-blue" alt="json fetched data"/> &nbsp; <img src="https://img.shields.io/badge/-minimalistic-blue" alt="minimalistic"/> &nbsp; <img src="https://img.shields.io/badge/-expandable-blue" alt="expandable"/>
 
 ## Overview
-An improvement over the Next.js version. This site loads content/ translations from Sanity CMS, making changes a breeze. Dark mode and light mode are now auto detected based on the user's preferences. Users can be tracked in realtime with Umami analytics. It shows the user's OS, browser, screensize, what they click on or scroll to, and many other features not included in Google analytics. Umami is not blocked by ad blockers like Google is.
+An improvement over the Next.js version. This site loads content/ translations from Sanity CMS, making changes a breeze. French was added. Dark mode and light mode are now auto detected based on the user's preferences. Users can be tracked in realtime with Umami analytics. It shows the user's OS, browser, screensize, what they click on or scroll to, and many other features not included in Google analytics. Umami is not blocked by ad blockers like Google is.
 
 ## Screenshots
 ![smartmockups_lh7u8n2f](https://user-images.githubusercontent.com/41050673/235960028-cdb6480b-b883-410c-9fa7-ae21ebeaa8a2.jpg)
