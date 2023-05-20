@@ -34,7 +34,13 @@
             class="p-[12px] bg-white dark:bg-darkSmoke transition-all group-hover:rotate-[-15deg] origin-bottom-left cursor-pointer"
             on:click={() => handleClickProject(project)}
           >
-            <video class="w-[320px]" src={project.preview} autoplay muted loop>
+            <video
+              class="w-[320px] min-h-[213px]"
+              src={project.preview}
+              autoplay
+              muted
+              loop
+            >
               <track kind="captions" /></video
             >
             <p
