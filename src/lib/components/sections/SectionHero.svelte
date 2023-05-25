@@ -9,7 +9,7 @@
 <div
   class="relative w-full svh flex flex-col justify-center items-center gap-[16px] bg-transparent overflow-hidden"
 >
-  <AnimatedBlob />
+  <!-- <AnimatedBlob /> -->
   <div>
     <h1 class="m-0 leading-[2.7rem] uppercase lg:text-[125px] text-left">
       <span class="lg:leading-[125%]">Sean</span>
