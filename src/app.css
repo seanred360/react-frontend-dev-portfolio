@@ -167,21 +167,11 @@ input {
 }
 
 .svw {
+  width: 100svw;
   width: 100vw;
 }
 
 .svh {
+  height: 100svh;
   height: 100vh;
-}
-
-@supports (width: 100svw) {
-  .svw {
-    width: 100svw;
-  }
-}
-
-@supports (height: 100svh) {
-  .svh {
-    height: 100svh;
-  }
 }

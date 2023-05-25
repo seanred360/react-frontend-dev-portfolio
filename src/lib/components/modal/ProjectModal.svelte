@@ -27,9 +27,10 @@
         <Carousel bind:this={carousel} autoplay infinite swiping>
           {#each $modalProps.images as image}
             <img
-              classname="flex justify-center items-center"
+              classname="h-[500px] flex justify-center items-center"
               src={urlFor(image).url()}
-              alt=""
+              alt={$modalProps.title[$currentLanguage]}
+              height="500"
             />
           {/each}
         </Carousel>
